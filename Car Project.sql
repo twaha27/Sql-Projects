@@ -24,4 +24,9 @@ group by year;
 select year, count(*) from car_dekho 
 group by year 
 having count(*)>100;
+-- The manager said to the employee all the cars details B/W 2015 & 2023; we need complete list --
+select count(*) from car_dekho where year between 2015 and 2023;
+-- The manager said to the employee all the cars details b/w 2015 to 2023 we need cpmlete list;
+select * from car_dekho 
+where year between 2015 and 2023;
 
