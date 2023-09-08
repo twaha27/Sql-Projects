@@ -25,7 +25,8 @@ from invoice
 group by billing_city
 order by Invoice_total desc;
 
-# Who is the best customer? The cutomer who has spent the money will be delared the best customer. Write query that returns the person who has spent the most money #
+# Who is the best customer? The cutomer who has spent the money will be delared the best customer. 
+Write query that returns the person who has spent the most money #
 
 select customer.customer_id, customer.first_name, customer.last_name
 from customer 
@@ -34,7 +35,8 @@ group by customer.customer_id, customer.first_name, customer.last_name
 order by total desc
 limit 1;
 
-# Write query to return the email, first name, last name &  Genre of all rock music listners. return your liat ordered alphabetically by email starting with A##
+# Write query to return the email, first name, last name &  Genre of all rock music listners. 
+return your liat ordered alphabetically by email starting with A##
 
 select distinct email, first_name, Last_name
 from customer
@@ -47,7 +49,8 @@ where track_id in(
 )
 order by email;
 
-# Lets invite the artist who have written the most rock music in our dataset. Write a query that returns the artist name and total track count of the 10 rock bands##
+# Lets invite the artist who have written the most rock music in our dataset. 
+Write a query that returns the artist name and total track count of the 10 rock bands##
 
 select artist.artist_id, artist.name, count(artist.artist_id) as Number_of_Songs
 from track
